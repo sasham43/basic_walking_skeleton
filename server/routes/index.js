@@ -18,7 +18,7 @@ router.post('/add', function(req, res, next){
     if (err) console.log('meow %s', err);
     res.send(kitty.toJSON());
     next();
-  })
+  });
 });
 
 router.get('/cats', function(req, res, next){
@@ -26,7 +26,7 @@ router.get('/cats', function(req, res, next){
     if (err) throw new Error(err);
     res.send(JSON.stringify(cats));
     next();
-  })
+  });
 });
 
 module.exports = router;
